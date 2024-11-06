@@ -1,0 +1,492 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+/* Resets all default styling for most HTML elements in browser */
+html, body, div, span, applet, object, iframe,
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* defines CSS custom properties (variables) for various colors. */
+:root {
+    --body-color: #F7F7FF;
+    --nav-color: #279AF1;
+    --footer-color: #23B5D3;
+    --text-color: #070600;
+    --text-color-second: #C3ADFF;
+}
+
+/* Sets the font family and color for all the body */
+body {
+    background-color: var(--body-color);
+    font-family: 'Ysabeau Infant', sans-serif;
+}
+
+/* applies a flexbox layout to logo */
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* styles a navigation menu with centered items that scale up and change background color on hover. */
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul li {
+    display: block;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.5s ease;
+}
+
+ul li:hover {
+    transform: scale(1.1);
+}
+  
+ul li a {
+    color: #fff;
+    background-color: var(--nav-color);
+    padding: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+ul li a:hover {
+    color: var(--text-color);
+    background-color: var(--text-color-second);
+}
+
+/* styles .home with centered text, a heading with custom colors and styles, a paragraph with custom colors and font size, and a styles a contact link as a button with hover and active effects. */
+.home {
+    text-align: center;
+    padding: 30px;
+}
+  
+.home h1 {
+    color: var(--text-color);
+    font-size: 36px;
+    font-weight: bolder;
+    margin-bottom: 30px;
+}
+
+.paragraph p {
+    color: var(--text-color);
+    font-size: 18px;
+}
+
+.contactlink {
+    display: inline-block;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--text-color-second);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.contactlink:hover {
+    color: var(--body-color);
+    background-color: var(--text-color);
+}
+  
+.contactlink:active {
+    background-color: var(--nav-color);
+}
+
+.bleed {
+    text-align: center;
+    padding: 30px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* styles the chefs and menu section with a heading that has custom colors, alignment, font size, and weight. The images have a maximum width, auto height, centered display, and margin. .info section within each chef's entry is styled having custom colors, alignment, and font size.*/
+.chefs h2 {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.chefs img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.info h3 {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+  }
+
+.info p {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+
+.menu {
+    text-align: center;
+    padding: 30px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.tagine {
+    margin: 10px;
+}
+.menu-items img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.menu-items h3 {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+  }
+
+.menu-items p {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+
+.couscous {
+    margin: 10px;
+}
+
+.pastilla {
+    margin: 10px;
+}
+
+.tea {
+    margin: 10px;
+}
+
+/* create a border effect. The animation runs for 1 second and repeats indefinitely. keyframes specify the border width and color at different percentages of the animation duration to create a pulsating border effect. */
+.price {
+    font-size: 20px;
+    margin-bottom: 20px;
+    animation: borderAnimation 1s forwards;
+    animation-iteration-count: infinite;
+}
+  
+@keyframes borderAnimation {
+    0% {
+      border-width: 0;
+    }
+    50% {
+      border-width: 2px;
+      border-color: var(--text-color-second);
+      border-style: solid;
+    }
+    100% {
+        border-width: 0;
+      }
+}
+
+.contact {
+    text-align: center;
+    padding: 30px;
+}
+
+.contact h2 {
+    font-size: 36px;
+    font-weight: bolder;
+    margin-bottom: 30px;
+}
+
+/* styles a form with input fields, labels, and a submit button, defining their appearance and behavior. */
+form {
+    margin-top: 50px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.form input[id="fullname"],
+.form input[id="email"] {
+    width: 80%;
+    height: 50px;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-family: 'Ysabeau Infant', sans-serif;
+}
+
+.form textarea[id="message"] {
+    width: 80%;
+    height: 300px;
+    resize: none;
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-family: 'Ysabeau Infant', sans-serif;
+}
+
+input[type="submit"] {
+    background-color: var(--text-color);
+    color: var(--body-color);
+    border: none;
+    padding: 10px 20px;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: 'Ysabeau Infant', sans-serif;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+input[type="submit"]:hover {
+    color: var(--text-color);
+    background-color: var(--text-color-second);
+    transform: scale(0.9);
+}
+
+/* styles the heading and iframe element within the location class, specifying their appearance and dimensions. */
+.location h3 {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.location iframe {
+    width: 100%;
+    height: 400px;
+}
+
+/* styles the footer element, setting its background color, text color, alignment, padding, and position so that it bleeds into wrapper container. */
+footer {
+    background-color: var(--footer-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+  
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* styles the social icons, displaying them in one line, setting margins, colors, and font size. The hover effect changes the text color. */
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    color: var(--text-color);
+    font-size: 20px;
+}
+  
+.social-icons a:hover {
+    color: var(--body-color);
+}
+
+/* styles the skip-link, positioning it at the bottom-right corner of the page, setting the color and font size. The hover effect triggers an animation that moves the element vertically. */
+.up {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: var(--text-color);
+    font-size: 50px;
+    text-decoration: none;
+}
+
+.up:hover {
+    animation: skiplinkmove 0.3s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes skiplinkmove {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+  
+.up i {
+    vertical-align: middle;
+}
+
+/* @media rule is used to apply specific styles when the screen width is at least 968 pixels. */
+@media screen and (min-width: 968px) 
+{
+    .wrapper {
+        margin: auto;
+        max-width: 80%;
+    }
+
+    .header {
+        display: flex;
+    }
+
+    /* displays as a flex container with items aligned to the end and arranged in a row direction. */
+    ul {
+        padding-left: 9rem ;
+        margin: 85px;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+    }
+
+    /* positions the .home element absolutely, spanning from the left to the right edge of its containing element */
+    .home {
+        position: absolute;
+        left: 0;
+        right: 0;
+        background-color: var(--footer-color);
+    }
+
+    .bleed {
+        padding-top: 320px;
+    }
+
+    .chefs article {
+        background-color: var(--text-color-second);
+        border: 2px solid;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .menu-items article {
+        background-color: var(--text-color-second);
+        border: 2px solid;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    /* sets up a grid layout for the .chefs and .menu-items containers. They have two columns and two rows, with a gap of 20 pixels between grid items. */
+    .chefs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .menu-items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /* creates a grid layout for the .contact container with two equal-width columns and a 20px gap. The .form element spans the first column, while the .location element spans the second column. */
+    .contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .form {
+        grid-column: 1 / span 1;
+    }
+      
+    .location {
+        grid-column: 2 / span 1;
+    }
+
+    .location h3 {
+        margin-top: 40px;
+        font-size: 24px;
+    }
+
+    iframe {
+        margin-top: 100px;
+    }
+
+    footer {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-top: 50px;
+    }
+}
