@@ -1,6 +1,683 @@
-/* reset css */
+/* reset */
 *,*::before,*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+html {
+    font-size: 16px; 
+}
+
+/*******************VARIABLES******************/
+:root {
+    --font-heading-nav: 'Lato', sans-serif;
+    --font-body-button: 'Karla', sans-serif;
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-brown: #966f2c;
+    --color-orange: #d69e3d;
+    --color-beige: #f3f0e9;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-beige);
+    color: var(--color-black);
+}
+
+h1, h2, h3, nav ul {
+    font-family: var(--font-heading-nav);
+}
+
+h1 {
+    font-size: 2.030rem;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 1.799rem;
+}
+
+h3 {
+    font-size: 1.421rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+p, button {
+    font-family: var(--font-body-button);
+}
+
+.orange {
+    color: var(--color-orange);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+button {
+    text-transform: uppercase;
+}
+
+.wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+/***************Skip links*******************/
+
+.skip ul{
+    list-style: none;
+    position: relative;
+  }
+  
+.skip a{
+    position: absolute;
+    top: -1000000px;
+}
+  
+.skip a:focus{
+    top: 0;
+    background: pink;
+    display: block;
+    padding: 5px;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+header .logo img {
+    max-height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--color-white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    color: var(--color-orange);
+}
+
+
+/* Explore our menu section */
+.intro {
+    position: relative;
+}
+
+.intro img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: 0% 45%;
+    filter: brightness(0.4);
+}
+
+.introcontent {
+    position: absolute;
+    top: 25%;
+    right: 10%;
+    left: 10%;
+    color: var(--color-white);
+    text-align: center;
+}
+
+.introcontent h1 {
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.introcontent p {
+    margin-top: 0.5rem;
+    margin: 15px 50px;
+}
+
+.introcontent button {
+    font-size: 1rem;
+    font-weight: 800;
+    width: 250px;
+    padding: 10px;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: all 0.25s ease; 
+    background-color: var(--color-white);
+    border: 2px solid white;
+}
+
+.introcontent button:hover {
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+}
+
+/* Welcome to my coffee house section */
+.welcome {
+    margin: 60px 10px 0 10px;
+    text-align: left;
+}
+
+.welcome p {
+    margin-bottom: 10px;
+}
+
+.welcome h2 {
+    margin: 10px 200px 10px 0px;
+}
+
+.welcome .wrapper {
+    gap: 0.5rem;
+}
+
+.welcomepics img {
+    width: 100%;
+}
+
+.welcomepics {
+    height: auto;
+    object-fit: cover;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+    "one one"
+    "one one"
+    "two three"
+    "four five";
+    gap: 20px;
+}
+
+.welcomepics img:nth-child(1){grid-area: one;}
+
+.welcomepics img:nth-child(2){grid-area: two;}
+
+.welcomepics img:nth-child(3){grid-area: three;}
+
+.welcomepics img:nth-child(4){grid-area: four;}
+
+.welcomepics img:nth-child(5){grid-area: five;}
+
+/* Why visit us section */
+.weoffer {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.weoffer h2 {
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.weoffer h3 {
+    text-transform: uppercase
+}
+
+.weoffer div {
+    padding: 1rem 0;
+    margin: 0 auto;
+}
+
+.weoffer img {
+    margin-bottom: 0.5rem;
+    width: 25%;
+}
+
+.weoffer p {
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+/* Menu and location section */
+.ourmenulocation {
+    position: relative;
+}
+
+.ourmenulocation img {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    object-position: 50% 45%;
+    filter: brightness(0.25);
+}
+
+.ourmenulocationcontent {
+    position: absolute;
+    top: 12%;
+    left: 10%;
+    right: 10%;
+    color: var(--color-white);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.ourmenulocation p {
+    font-weight: 400;
+    margin: 10px 50px;
+}
+
+.ourmenulocation button {
+    margin-top: 40px;
+    margin-bottom: 110px;
+    font-size: 1rem;
+    font-weight: 800;
+    width: 215px;
+    padding: 10px;
+}
+
+#menu-button {
+    background-color: var(--color-white);
+    cursor: pointer;
+    transition: all 0.25s ease; 
+}
+
+#menu-button:hover {
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+}
+
+#location-button {
+    color: var(--color-white);
+    border-color: var(--color-white);
+    border-width: 3px;
+    border-style: solid;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+    transition: all 0.3s ease;
+}
+
+#location-button:hover {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+/* About Us section*/
+.about-us {
+    margin: 100px 10px 10px 10px;
+}
+
+.about-us img {
+    width: 100%;
+}
+
+.about-us .orange {
+    margin-top: 20px;
+}
+
+.about-us h2 {
+    text-transform: uppercase;
+    margin: 10px auto;
+}
+
+.about-us p {
+    margin: 15px auto;
+}
+
+.about-us button {
+    width: 160px;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 800;
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.about-us button:hover {
+    background-color: var(--color-orange);
+    color: var(--color-black);
+}
+
+/* Testimonials section */
+.testimonials {
+    margin: 100px auto 0px auto;
+    background-color: var(--color-black);
+}
+
+.testimonials h2 {
+    color: var(--color-white);
+    text-transform: uppercase;
+    margin: 10px 100px 40px 0;
+}
+
+.testimonials .wrapper {
+    padding-top: 70px;
+    margin: 15px 15px 0 15px;
+    padding-bottom: 70px;
+}
+
+.testimonials .orange {
+    font-weight: 500;
+}
+
+.testimonial-1, .testimonial-2, .testimonial-3 {
+    position: relative;
+}
+
+.testimonial-1 img, .testimonial-2 img, .testimonial-3 img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover; 
+    filter: brightness(0.7);
+}
+
+.testimonial-1 img {
+    object-position: 0% 50%;
+}
+
+.testimonial-2 img {
+    object-position: 0% 7%;
+    padding-top: 20px;
+}
+
+.testimonial-3 img {
+    object-position: 0% 0%;
+    padding-top: 20px;
+}
+
+.testimonial-text {
+    position: absolute;
+    text-align: left;
+    top: 90%;
+    left: 20%;
+}
+
+.testimonial-content {
+    color: var(--color-white);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.testimonial-client {
+    padding-top: 10px;
+}
+
+/* Footer section */
+hr {
+    opacity: 15%;
+}
+
+footer {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 15px;
+    text-align: center;
+}
+
+footer p {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+/* For tablet  */
+@media (min-width: 768px) {
+    /* font size */
+    h1 {
+        font-size: 2.986rem;
+    }
+    
+    h2 {
+        font-size: 2.488rem;
+    }
+    
+    h3 {
+        font-size: 1.728rem;
+    }
+    
+    /* tablet welcome section */
+    .welcome {
+        margin-top: 70px;
+    }   
+
+    .welcome h3 {
+        padding-right: 200px;
+    }
+
+    .welcomepics {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: 
+            "one one two three"
+            "one one four five"
+    }
+
+    /* tablet what we offer section */
+    .weoffer {
+        margin-top: 30px;
+    }
+    
+    .offericons {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .fairtrade {
+        flex-basis: 50%;
+    }
+    
+    .localbaked {
+        flex-basis: 50%;
+    }
+    
+    .withlove {
+        flex-basis: 50%;
+    }
+
+    .weoffer img {
+        width: 30%;
+    }
+
+    .weoffer p {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    /* tablet menu and location section */
+    .ourmenulocationcontent {
+        display: flex;
+        top: 20%;
+    }
+
+    .ourmenulocation img {
+        height: 450px;     
+    }
+
+    .menu, .location {
+        flex-basis: 50%;
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+
+    /* tablet about us section */
+    .about-us {
+        padding-bottom: 130px;
+    }
+
+    .about-us img {
+        float: left;
+        width: 50%;
+        margin-right: 20px;
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+    .about-us article {
+        margin-right: 10px;
+    }
+    
+    .about-us .orange {
+        padding-top: 30px;
+    }
+
+    /* tablet testimonials section */
+    .testimonials article {
+        display: flex;
+    }
+
+    .testimonial-1 img, .testimonial-2 img, .testimonial-3 img{
+        height: 400px;
+        padding-top: 0;
+    }
+
+    .testimonial-2 img {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .testimonials h3 {
+        margin-right: 400px;
+    }
+
+    .testimonial-text {
+        display: flex;
+        flex-direction: column;
+        top: 65%;
+    }
+}
+
+/* desktop welcome section */
+@media (min-width: 1100px) {
+    /* font size */
+    h1 {
+        font-size: 3.815rem;
+        text-transform: uppercase;
+    }
+    
+    h2 {
+        font-size: 3.052rem;
+    }
+    
+    h3 {
+        font-size: 1.953rem;
+    }
+
+    /* desktop welcome section */
+    header {
+        padding: 0;
+    }
+    
+    header .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+    
+    header .wrapper img {
+        height: 30px;
+        margin-left: 100px;
+    }
+    
+    header .wrapper ul {
+        display: flex;
+        gap: 50px; 
+        margin-left: auto;
+        padding: 20px 0;
+    }
+
+    /* desktop explore section */
+    .intro img {
+        height: 700px;
+        filter: brightness(0.5);
+    }
+
+    .intro h1, .intro p {
+        margin: 0 auto;
+        width: 650px;
+    }
+
+    .introcontent {
+        top: 33%;
+    }
+        
+    /* desktop welcome section */
+    .welcome {
+        margin: 70px 150px 0 150px;
+    }
+
+    .welcome h3 {
+        margin-right: 10px;
+    }
+
+    /* desktop what we offer */
+    .offericons {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 75%;
+    }
+    
+    .weoffer img {
+        width: 140px;
+    }
+
+    .fairtrade, .localbaked, .withlove {
+        /* margin: 0 50px; */
+    }
+
+    .offericons h3 {
+        font-size: 1.5rem;
+    }
+
+    .offericons p {
+        margin: 0 20px;
+    }
+
+    /* desktop ,eun and location */
+    .ourmenulocation img {
+        height: 450px;
+        object-position: 50% 50%;
+    }
+
+    /* desktop about us */
+    .about-us {
+        margin: auto 200px;
+    }
+
+    .about-us img {
+        object-fit: cover;
+        height: 500px;
+        width: auto;
+    }
+
+    .about-us .orange {
+        margin-top: 100px;
+    }
+
+    /* desktop testmonial */
+    .testimonials .wrapper {
+        margin: 70px 150px 0 250px;
+    }
+
+    .testimonials {
+        margin: 0 auto;
+    }
+
+    .testimonial-1 img, .testimonial-2 img, .testimonial-3 img {
+        height: 450px;
+        margin: 0 20px;
+    }
+
+    /* desktop footer */
+    hr {
+        margin: 0 150px;
+    }
 }

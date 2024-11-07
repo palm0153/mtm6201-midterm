@@ -3,36 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Midterm</title>
+    <title>Document</title>
+    <!-- font links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-x
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <div class="skip-links">
+     <!-- skip links -->
+     <div class="skip">
         <ul>
           <li><a href="#Navigation">Navigation</a></li>
-          <li><a href="#Offer">What We Offer</a></li>
+          <li><a href="#what-we-offer">What We Offer</a></li>
           <li><a href="#Menu">Menu</a></li>
           <li><a href="#Locations">Locations</a></li>
           <li><a href="#About-Us">About Us</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
         </ul>
       </div>
-      <header role="banner">
-        <nav class="wrapper" aria-label="Main Navigation" id="Nav">
-            <img src="images/my-coffee-shop-logo.svg" alt="my coffee house logo" role="img" aria-label="my coffee house logo">
+    <header role="banner">
+        <div class="logo">
+            <img src="images/my-coffee-shop-logo.svg" alt="My Coffee House Logo" aria-label="coffee house logo">
+        </div>
+        <nav aria-label="Main Navigation" id="Navigation">
             <ul>
-                <li><a href="#About-Us">About Us</a></li>
+                <li><a href="#About-us">About Us</a></li>
                 <li><a href="#Menu">Menu</a></li>
                 <li><a href="#Locations">Locations</a></li>
             </ul>
         </nav>
     </header>
+    <main id="main" role="main">
+        <div class="intro">
+            <section class="wrapper">
+                <img src="images/hero-background.jpg" alt="girl with glasses" role="img" aria-hidden="true">
+                <div class="introcontent">
+                    <h1>Experience coffee like never before</h1>
+                    <p>We craft more than beverages; we curate memories, one flavorful moment at a time. Embrace the aroma and let every visit be a chapter in your coffee story.</p>
+                    <button aria-label="Explore our menu" role="button">Explore our menu</button>
+                </div>
+            </section>
+        </div>
+        <div class="welcome">
+            <div class="wrapper">
+                <p class="orange">Welcome to My Coffee House</p>
+                <h2>EXPERIENCE A NEW WAY TO TASTE COFFEE</h2>
+                <div class="welcomepics">
+                    <img src="images/latte.jpeg" alt="latte" role="img" aria-hidden="true">
+                    <img src="images/coffee-beans.jpeg" alt="coffee beans" role="img" aria-hidden="true">
+                    <img src="images/pouring-coffee.jpeg" alt="pouring coffee in a cup" role="img" aria-hidden="true">
+                    <img src="images/three-cups.jpeg" alt="cups of coffee" role="img" aria-hidden="true">
+                    <img src="images/smiling-employee.jpeg" alt="girl with glasses" role="img" aria-hidden="true">
+                </div>
+            </div>
+        </div>
+        <div class="weoffer" id="weoffer">
+            <div class="wrapper">
+                <p class="orange">What we Offer</p>
+                <h2>Why visit us?</h2>
+                <div class="offericons">
+                    <div class="fairtrade" role="article">
+                        <img src="images/fair-trade.svg" alt="Fair Trade Coffee icon" role="img" aria-hidden="true">
+                        <h3>Fair Trade Coffee</h3>
+                        <p>We build direct relationships with the farmers and producers who help in the development of delicious, sustainable and organic coffee.</p>
+                    </div>
+                    <div class="localbaked" role="article">
+                        <img src="images/local-baked-goods.svg" alt="Local Baked Goods icon" role="img" aria-hidden="true">
+                        <h3>Local baked goods</h3>
+                        <p>We use local products to bake our goods and bring in a variety of treats from local bakers with our community.</p>
+                    </div>
+                    <div class="withlove" role="article">
+                        <img src="images/made-with-love.svg" alt="Made with Love icon" role="img" aria-hidden="true">
+                        <h3>Made with love</h3>
+                        <p>We value our customers and make it our priority to serve everyone with respect and a friendly smile to start their day of right.</p>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <div class="ourmenulocation">
+            <div class="wrapper">
+                <img src="images/coffee-shop.jpeg" alt="Interior view of our coffee shop" role="img" aria-hidden="true">
+                <div class="ourmenulocationcontent">
+                    <div class="menu" id="Menu">
+                        <p class="orange">Our Menu</p>
+                        <h2>Explore what we have to offer you</h2>
+                        <button aria-label="Explore our menu" role="button" id="menu-button">Explore our menu</button>
+                    </div>
+                    <div class="location" id="Locations">
+                        <p class="orange">Locations</p>
+                        <h2>Find your nearest coffee shop</h2>
+                        <button aria-label="View our locations" role="button" id="location-button">View Locations</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-us" id="About-Us">
+            <div class="wrapper clearfix">
+                <img src="images/about-us.jpeg" alt="making coffee" role="img" aria-hidden="true">
+                <p class="orange">About Us</p>
+                <article>
+                    <h2>Read our story</h2>
+                    <p>In the heart of our community, My Coffee House emerged as a humble local coffee shop that sought to redefine the coffee experience. Founded with a passion for quality brews and a commitment to fostering genuine connections, we embarked on this journey with a vision to create a warm and inviting space for coffee enthusiasts and casual patrons alike.</p>
+                    <p>My Coffee House quickly became a cherished gathering spot, where the rich aroma of freshly ground coffee beans mingled with the laughter of friends and the tapping of keyboards from those seeking a cozy workspace.</p>
+                </article>              
+                <button>Learn more</button>
+            </div>
+        </div>
+        <div class="testimonials" id="testimonials">
+            <div class="wrapper">
+                <p class="orange">Testimonials</p>
+                <h2>What our customers say about us</h2>
+                <article>
+                    <div class="testimonial-1" role="article">
+                        <img src="images/testimonial-1.jpeg" alt="pic of Jane D" role="img" aria-hidden="true">
+                        <article class="testimonial-text">
+                            <p class="testimonial-content">"I always make a point to visit My Coffee Company when in Ottawa. Delicious coffee and friendly service."</p>
+                            <p class="orange testimonial-client">Jane D., Toronto</p>
+                        </article>
+                    </div>
+                    <div class="testimonial-2" role="article">
+                        <img src="images/testimonial-2.jpeg" alt="pic of Scott S" role="img" aria-hidden="true">
+                        <article class="testimonial-text">
+                            <p class="testimonial-content">"Great atmosphere to get some work done while enjoying a cup or two of incredible coffee."</p>
+                        <p class="orange testimonial-client">Scott S., Ottawa</p>
+                        </article>
+                    </div>
+                    <div class="testimonial-3" role="article">
+                        <img src="images/testimonial-3.jpeg" alt="pic of Susie F" role="img" aria-hidden="true">
+                        <article class="testimonial-text">
+                            <p class="testimonial-content">"Best coffee in Ottawa and the service is top notch. Would highly recommend a visit."</p>
+                            <p class="orangec testimonial-client">Susie F., Ottawa</p>
+                        </article>
+                    </div>
+                </article>  
+            </div>
+        </div>
+    </main>
+    <footer role="contentinfo">
+        <hr>
+        <p>© My Coffee Company 2024</p>
+    </footer>
 </body>
 </html>
